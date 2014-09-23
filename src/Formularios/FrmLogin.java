@@ -111,6 +111,12 @@ Connection cn = con.conectar();
                 {                    
                 FrmPrincipalInsc principal = new FrmPrincipalInsc(usuario);
                 principal.setVisible(true);
+                }       
+                
+                 if(rol.equals("Administrador"))
+                {                    
+                FrmPrincipalRoot principal = new FrmPrincipalRoot(usuario);
+                principal.setVisible(true);
                 }            
                 this.dispose();
             }

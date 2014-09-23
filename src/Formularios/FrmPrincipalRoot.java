@@ -1,10 +1,10 @@
 package Formularios;
 import javax.swing.ImageIcon;
 
-public class FrmPrincipalInsc extends javax.swing.JFrame {
+public class FrmPrincipalRoot extends javax.swing.JFrame {
 public String Usuario;
 
-    public FrmPrincipalInsc(String user) {
+    public FrmPrincipalRoot(String user) {
         initComponents();
         Usuario = user;
         labeluser.setText(Usuario);
@@ -12,7 +12,7 @@ public String Usuario;
          this.setIconImage( new ImageIcon(getClass().getResource("/Img/umg.png")).getImage());
     }
 
-    private FrmPrincipalInsc() {
+    private FrmPrincipalRoot() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -22,8 +22,7 @@ public String Usuario;
 
         jMenu1 = new javax.swing.JMenu();
         labeluser = new javax.swing.JLabel();
-        BtnAlumnosNo = new javax.swing.JButton();
-        BtnAlumnosNo1 = new javax.swing.JButton();
+        BtnUsuarios = new javax.swing.JButton();
         labelbienvenido = new javax.swing.JLabel();
         labelfondo = new javax.swing.JLabel();
 
@@ -33,7 +32,6 @@ public String Usuario;
         setTitle("Control De Asistencia");
         setMaximumSize(new java.awt.Dimension(615, 490));
         setMinimumSize(new java.awt.Dimension(615, 490));
-        setPreferredSize(new java.awt.Dimension(615, 485));
         getContentPane().setLayout(null);
 
         labeluser.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -42,31 +40,18 @@ public String Usuario;
         getContentPane().add(labeluser);
         labeluser.setBounds(450, 90, 100, 20);
 
-        BtnAlumnosNo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BtnAlumnosNo.setForeground(new java.awt.Color(0, 21, 56));
-        BtnAlumnosNo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/user.png"))); // NOI18N
-        BtnAlumnosNo.setText("Alumnos Inscritos");
-        BtnAlumnosNo.setToolTipText("Inscripción de Alumnos");
-        BtnAlumnosNo.addActionListener(new java.awt.event.ActionListener() {
+        BtnUsuarios.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BtnUsuarios.setForeground(new java.awt.Color(0, 21, 56));
+        BtnUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/user.png"))); // NOI18N
+        BtnUsuarios.setText("Usuarios");
+        BtnUsuarios.setToolTipText("Inscripción de Alumnos");
+        BtnUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnAlumnosNoActionPerformed(evt);
+                BtnUsuariosActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnAlumnosNo);
-        BtnAlumnosNo.setBounds(200, 110, 200, 50);
-
-        BtnAlumnosNo1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BtnAlumnosNo1.setForeground(new java.awt.Color(0, 21, 56));
-        BtnAlumnosNo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/user.png"))); // NOI18N
-        BtnAlumnosNo1.setText("Inscripciones");
-        BtnAlumnosNo1.setToolTipText("Inscripción de Alumnos");
-        BtnAlumnosNo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnAlumnosNo1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BtnAlumnosNo1);
-        BtnAlumnosNo1.setBounds(20, 110, 150, 50);
+        getContentPane().add(BtnUsuarios);
+        BtnUsuarios.setBounds(420, 130, 130, 50);
 
         labelbienvenido.setText("Bienvenido(a)");
         getContentPane().add(labelbienvenido);
@@ -79,16 +64,10 @@ public String Usuario;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnAlumnosNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAlumnosNoActionPerformed
-       FrmAlumnossi alumnos = new FrmAlumnossi( Usuario);
-       alumnos.setVisible(true);
-    }//GEN-LAST:event_BtnAlumnosNoActionPerformed
-
-    private void BtnAlumnosNo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAlumnosNo1ActionPerformed
-        // TODO add your handling code here:
-        FrmAlumnosno alumnos = new FrmAlumnosno( Usuario);
-       alumnos.setVisible(true);
-    }//GEN-LAST:event_BtnAlumnosNo1ActionPerformed
+    private void BtnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnUsuariosActionPerformed
+      frmUsuario usuarios = new frmUsuario(Usuario);
+       usuarios.setVisible(true);
+    }//GEN-LAST:event_BtnUsuariosActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -104,26 +83,25 @@ public String Usuario;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmPrincipalInsc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmPrincipalRoot.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmPrincipalInsc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmPrincipalRoot.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmPrincipalInsc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmPrincipalRoot.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmPrincipalInsc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmPrincipalRoot.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmPrincipalInsc().setVisible(true);                
+                new FrmPrincipalRoot().setVisible(true);                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnAlumnosNo;
-    private javax.swing.JButton BtnAlumnosNo1;
+    private javax.swing.JButton BtnUsuarios;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JLabel labelbienvenido;
     private javax.swing.JLabel labelfondo;
